@@ -1,0 +1,156 @@
+{
+  "metadati": {
+    "titolo": "Pianificazione delle consegne di un'impresa agroalimentare",
+    "impresa_simulata": "Fontanile Agroalimentare",
+    "descrizione_impresa": "Piccola impresa lattiero-casearia simulata che distribuisce yogurt, ricotta e formaggi freschi in cassette refrigerate.",
+    "data_consultazione": "2026-10-25",
+    "fonte_localita": {
+      "nome": "Noviglio - Wikipedia",
+      "url": "https://it.wikipedia.org/wiki/Noviglio",
+      "nota": "I cinque clienti corrispondono ai comuni indicati come confinanti con Noviglio."
+    },
+    "fonte_geocodifica": {
+      "nome": "OpenStreetMap Nominatim",
+      "url": "https://nominatim.openstreetmap.org/ui/search.html",
+      "licenza": "OpenStreetMap contributors, ODbL 1.0"
+    },
+    "fonte_percorsi": {
+      "nome": "OSRM - Open Source Routing Machine",
+      "url": "https://router.project-osrm.org/table/v1/driving/9.0710150,45.3577275;9.0172233,45.3492631;9.0342259,45.4063065;9.0593248,45.3164515;9.0996380,45.3321693;9.1060084,45.3601000?annotations=distance,duration",
+      "profilo": "driving",
+      "nota": "Distanze e tempi sono stati ottenuti dalla rete stradale OpenStreetMap. I tempi non includono il traffico in tempo reale."
+    },
+    "nota_indirizzi": "I municipi e gli indirizzi pubblici sono usati soltanto come punti geografici riproducibili. Clienti e consegne sono simulati."
+  },
+  "deposito": {
+    "id": "D",
+    "localita": "Mairano, Noviglio",
+    "punto_riferimento": "Piazza Roma",
+    "lat": 45.357615,
+    "lon": 9.070876,
+    "scostamento_rete_m": 16.62
+  },
+  "clienti": [
+    {
+      "id": "C1",
+      "localita": "Rosate",
+      "punto_riferimento": "Via Vittorio Veneto 2",
+      "tipo_cliente": "Emporio alimentare simulato",
+      "domanda_kg": 90,
+      "lat": 45.349279,
+      "lon": 9.017269,
+      "scostamento_rete_m": 4.02
+    },
+    {
+      "id": "C2",
+      "localita": "Gaggiano",
+      "punto_riferimento": "Piazza Aldo Daccò",
+      "tipo_cliente": "Ristorante simulato",
+      "domanda_kg": 80,
+      "lat": 45.406413,
+      "lon": 9.034137,
+      "scostamento_rete_m": 13.69
+    },
+    {
+      "id": "C3",
+      "localita": "Vernate",
+      "punto_riferimento": "Piazza Quattro Novembre",
+      "tipo_cliente": "Bottega alimentare simulata",
+      "domanda_kg": 70,
+      "lat": 45.316261,
+      "lon": 9.059270,
+      "scostamento_rete_m": 21.66
+    },
+    {
+      "id": "C4",
+      "localita": "Binasco",
+      "punto_riferimento": "Via Albertario",
+      "tipo_cliente": "Gastronomia simulata",
+      "domanda_kg": 100,
+      "lat": 45.331964,
+      "lon": 9.099290,
+      "scostamento_rete_m": 35.55
+    },
+    {
+      "id": "C5",
+      "localita": "Zibido San Giacomo",
+      "punto_riferimento": "Piazza Roma",
+      "tipo_cliente": "Emporio alimentare simulato",
+      "domanda_kg": 80,
+      "lat": 45.360020,
+      "lon": 9.106004,
+      "scostamento_rete_m": 8.90
+    }
+  ],
+  "matrice_distanze_km": [
+    [0.0, 4.9394, 11.1621, 7.7697, 4.6863, 4.1737],
+    [5.3047, 0.0, 8.2832, 8.3240, 8.8924, 9.4306],
+    [10.0328, 6.9488, 0.0, 13.6458, 14.0435, 11.1919],
+    [7.7617, 7.2723, 14.8088, 0.0, 4.0550, 8.7166],
+    [4.3232, 8.7743, 15.2535, 4.2102, 0.0, 4.6616],
+    [4.1737, 9.0652, 10.6664, 9.0524, 4.9915, 0.0]
+  ],
+  "matrice_tempi_min": [
+    [0.0, 6.2617, 14.6217, 10.8000, 7.5017, 6.6900],
+    [6.5133, 0.0, 12.1400, 11.0750, 11.8050, 13.0300],
+    [12.7083, 10.0133, 0.0, 17.6100, 18.4517, 14.9833],
+    [10.7167, 11.2250, 19.7233, 0.0, 5.5433, 12.6783],
+    [6.4050, 10.8283, 19.2033, 6.0633, 0.0, 7.1350],
+    [6.7017, 12.7200, 14.2933, 12.3600, 7.6617, 0.0]
+  ],
+  "vincoli": {
+    "carico_min_per_veicolo": 15.0,
+    "servizio_min_per_cliente": 15.0,
+    "percorsi_chiusi": true,
+    "consegna_frazionata": false,
+    "finestre_temporali": false
+  },
+  "scenari": {
+    "A": {
+      "nome": "Un veicolo",
+      "numero_veicoli": 1,
+      "capacita_kg": 600.0,
+      "costo_noleggio_giorno": 120.0,
+      "costo_km": 0.38,
+      "costo_autista_ora": 24.0
+    },
+    "B": {
+      "nome": "Due veicoli identici",
+      "numero_veicoli": 2,
+      "capacita_kg": 300.0,
+      "costo_noleggio_giorno": 70.0,
+      "costo_km": 0.30,
+      "costo_autista_ora": 24.0
+    }
+  },
+  "sensibilita": {
+    "noleggio_veicolo_grande": {
+      "descrizione": "Noleggio giornaliero del veicolo grande",
+      "unita": "€/giorno",
+      "minimo": 80.0,
+      "massimo": 200.0,
+      "passo": 5.0
+    },
+    "noleggio_veicolo_piccolo": {
+      "descrizione": "Noleggio giornaliero di ciascun veicolo piccolo",
+      "unita": "€/giorno per veicolo",
+      "minimo": 50.0,
+      "massimo": 100.0,
+      "passo": 5.0
+    },
+    "costo_autista": {
+      "descrizione": "Costo orario di un autista",
+      "unita": "€/ora",
+      "minimo": 18.0,
+      "massimo": 35.0,
+      "passo": 1.0
+    },
+    "costo_km_percentuale": {
+      "descrizione": "Variazione percentuale simultanea del costo chilometrico",
+      "unita": "%",
+      "minimo": -30.0,
+      "massimo": 30.0,
+      "passo": 5.0
+    }
+  }
+}

@@ -1,0 +1,467 @@
+{
+  "metadati": {
+    "titolo": "Pianificazione delle consegne di un'impresa agroalimentare",
+    "impresa_simulata": "Fontanile Agroalimentare",
+    "descrizione_impresa": "Piccola impresa lattiero-casearia simulata che distribuisce yogurt, ricotta e formaggi freschi in cassette refrigerate.",
+    "data_consultazione": "2026-10-25",
+    "fonte_localita": {
+      "nome": "Noviglio - Wikipedia",
+      "url": "https://it.wikipedia.org/wiki/Noviglio",
+      "nota": "I cinque clienti corrispondono ai comuni indicati come confinanti con Noviglio."
+    },
+    "fonte_geocodifica": {
+      "nome": "OpenStreetMap Nominatim",
+      "url": "https://nominatim.openstreetmap.org/ui/search.html",
+      "licenza": "OpenStreetMap contributors, ODbL 1.0"
+    },
+    "fonte_percorsi": {
+      "nome": "OSRM - Open Source Routing Machine",
+      "url": "https://router.project-osrm.org/table/v1/driving/9.0710150,45.3577275;9.0172233,45.3492631;9.0342259,45.4063065;9.0593248,45.3164515;9.0996380,45.3321693;9.1060084,45.3601000?annotations=distance,duration",
+      "profilo": "driving",
+      "nota": "Distanze e tempi sono stati ottenuti dalla rete stradale OpenStreetMap. I tempi non includono il traffico in tempo reale."
+    },
+    "nota_indirizzi": "I municipi e gli indirizzi pubblici sono usati soltanto come punti geografici riproducibili. Clienti e consegne sono simulati."
+  },
+  "data_consultazione": "2026-10-25",
+  "domanda_totale_kg": 420.0,
+  "scenario_a": {
+    "veicoli": [
+      {
+        "sequenza_nodi": [
+          "D",
+          "C5",
+          "C2",
+          "C1",
+          "C3",
+          "C4",
+          "D"
+        ],
+        "ordine_clienti": [
+          "C5",
+          "C2",
+          "C1",
+          "C3",
+          "C4"
+        ],
+        "carico_kg": 420.0,
+        "distanza_km": 38.4911,
+        "tempo_guida_min": 54.0199,
+        "tempo_servizio_min": 75.0,
+        "tempo_carico_min": 15.0,
+        "tempo_completamento_min": 144.0199
+      }
+    ],
+    "riepilogo": {
+      "numero_veicoli_utilizzati": 1,
+      "carichi_veicoli_kg": [
+        420.0
+      ],
+      "carico_totale_kg": 420.0,
+      "distanza_totale_km": 38.4911,
+      "tempo_guida_totale_min": 54.0199,
+      "tempo_servizio_totale_min": 75.0,
+      "tempo_carico_totale_min": 15.0,
+      "tempo_autisti_totale_min": 144.0199,
+      "tempo_completamento_min": 144.0199
+    },
+    "candidati_valutati": 120,
+    "candidati_ammissibili": 120
+  },
+  "scenario_b": {
+    "veicoli": [
+      {
+        "sequenza_nodi": [
+          "D",
+          "C5",
+          "C2",
+          "C1",
+          "D"
+        ],
+        "ordine_clienti": [
+          "C5",
+          "C2",
+          "C1"
+        ],
+        "carico_kg": 250.0,
+        "distanza_km": 27.0936,
+        "tempo_guida_min": 37.5099,
+        "tempo_servizio_min": 45.0,
+        "tempo_carico_min": 15.0,
+        "tempo_completamento_min": 97.5099
+      },
+      {
+        "sequenza_nodi": [
+          "D",
+          "C3",
+          "C4",
+          "D"
+        ],
+        "ordine_clienti": [
+          "C3",
+          "C4"
+        ],
+        "carico_kg": 170.0,
+        "distanza_km": 16.1479,
+        "tempo_guida_min": 22.7483,
+        "tempo_servizio_min": 30.0,
+        "tempo_carico_min": 15.0,
+        "tempo_completamento_min": 67.7483
+      }
+    ],
+    "riepilogo": {
+      "numero_veicoli_utilizzati": 2,
+      "carichi_veicoli_kg": [
+        250.0,
+        170.0
+      ],
+      "carico_totale_kg": 420.0,
+      "distanza_totale_km": 43.2415,
+      "tempo_guida_totale_min": 60.2582,
+      "tempo_servizio_totale_min": 75.0,
+      "tempo_carico_totale_min": 30.0,
+      "tempo_autisti_totale_min": 165.2582,
+      "tempo_completamento_min": 97.5099
+    },
+    "partizioni_valutate": 15,
+    "partizioni_ammissibili": 10,
+    "candidati_valutati": 120
+  },
+  "confronto_base": {
+    "costo_a": {
+      "noleggio": 120.0,
+      "costo_km": 14.63,
+      "costo_autisti": 57.61,
+      "totale": 192.23
+    },
+    "costo_b": {
+      "noleggio": 140.0,
+      "costo_km": 12.97,
+      "costo_autisti": 66.1,
+      "totale": 219.08
+    },
+    "differenza_a_meno_b": -26.85,
+    "scenario_conveniente": "A"
+  },
+  "sensibilita": {
+    "noleggio_veicolo_grande": {
+      "descrizione": "Noleggio giornaliero del veicolo grande",
+      "unita": "€/giorno",
+      "valori": [
+        80.0,
+        85.0,
+        90.0,
+        95.0,
+        100.0,
+        105.0,
+        110.0,
+        115.0,
+        120.0,
+        125.0,
+        130.0,
+        135.0,
+        140.0,
+        145.0,
+        150.0,
+        155.0,
+        160.0,
+        165.0,
+        170.0,
+        175.0,
+        180.0,
+        185.0,
+        190.0,
+        195.0,
+        200.0
+      ],
+      "costo_a": [
+        152.23,
+        157.23,
+        162.23,
+        167.23,
+        172.23,
+        177.23,
+        182.23,
+        187.23,
+        192.23,
+        197.23,
+        202.23,
+        207.23,
+        212.23,
+        217.23,
+        222.23,
+        227.23,
+        232.23,
+        237.23,
+        242.23,
+        247.23,
+        252.23,
+        257.23,
+        262.23,
+        267.23,
+        272.23
+      ],
+      "costo_b": [
+        219.08,
+        219.08,
+        219.08,
+        219.08,
+        219.08,
+        219.08,
+        219.08,
+        219.08,
+        219.08,
+        219.08,
+        219.08,
+        219.08,
+        219.08,
+        219.08,
+        219.08,
+        219.08,
+        219.08,
+        219.08,
+        219.08,
+        219.08,
+        219.08,
+        219.08,
+        219.08,
+        219.08,
+        219.08
+      ],
+      "differenza_a_meno_b": [
+        -66.85,
+        -61.85,
+        -56.85,
+        -51.85,
+        -46.85,
+        -41.85,
+        -36.85,
+        -31.85,
+        -26.85,
+        -21.85,
+        -16.85,
+        -11.85,
+        -6.85,
+        -1.85,
+        3.15,
+        8.15,
+        13.15,
+        18.15,
+        23.15,
+        28.15,
+        33.15,
+        38.15,
+        43.15,
+        48.15,
+        53.15
+      ],
+      "punto_pareggio": 146.85
+    },
+    "noleggio_veicolo_piccolo": {
+      "descrizione": "Noleggio giornaliero di ciascun veicolo piccolo",
+      "unita": "€/giorno per veicolo",
+      "valori": [
+        50.0,
+        55.0,
+        60.0,
+        65.0,
+        70.0,
+        75.0,
+        80.0,
+        85.0,
+        90.0,
+        95.0,
+        100.0
+      ],
+      "costo_a": [
+        192.23,
+        192.23,
+        192.23,
+        192.23,
+        192.23,
+        192.23,
+        192.23,
+        192.23,
+        192.23,
+        192.23,
+        192.23
+      ],
+      "costo_b": [
+        179.08,
+        189.08,
+        199.08,
+        209.08,
+        219.08,
+        229.08,
+        239.08,
+        249.08,
+        259.08,
+        269.08,
+        279.08
+      ],
+      "differenza_a_meno_b": [
+        13.15,
+        3.15,
+        -6.85,
+        -16.85,
+        -26.85,
+        -36.85,
+        -46.85,
+        -56.85,
+        -66.85,
+        -76.85,
+        -86.85
+      ],
+      "punto_pareggio": 56.58
+    },
+    "costo_autista": {
+      "descrizione": "Costo orario di un autista",
+      "unita": "€/ora",
+      "valori": [
+        18.0,
+        19.0,
+        20.0,
+        21.0,
+        22.0,
+        23.0,
+        24.0,
+        25.0,
+        26.0,
+        27.0,
+        28.0,
+        29.0,
+        30.0,
+        31.0,
+        32.0,
+        33.0,
+        34.0,
+        35.0
+      ],
+      "costo_a": [
+        177.83,
+        180.23,
+        182.63,
+        185.03,
+        187.43,
+        189.83,
+        192.23,
+        194.63,
+        197.04,
+        199.44,
+        201.84,
+        204.24,
+        206.64,
+        209.04,
+        211.44,
+        213.84,
+        216.24,
+        218.64
+      ],
+      "costo_b": [
+        202.55,
+        205.3,
+        208.06,
+        210.81,
+        213.57,
+        216.32,
+        219.08,
+        221.83,
+        224.58,
+        227.34,
+        230.09,
+        232.85,
+        235.6,
+        238.36,
+        241.11,
+        243.86,
+        246.62,
+        249.37
+      ],
+      "differenza_a_meno_b": [
+        -24.72,
+        -25.07,
+        -25.43,
+        -25.78,
+        -26.14,
+        -26.49,
+        -26.85,
+        -27.2,
+        -27.54,
+        -27.9,
+        -28.25,
+        -28.61,
+        -28.96,
+        -29.32,
+        -29.67,
+        -30.02,
+        -30.38,
+        -30.73
+      ],
+      "punto_pareggio": null
+    },
+    "costo_km_percentuale": {
+      "descrizione": "Variazione percentuale simultanea del costo chilometrico",
+      "unita": "%",
+      "valori": [
+        -30.0,
+        -25.0,
+        -20.0,
+        -15.0,
+        -10.0,
+        -5.0,
+        0.0,
+        5.0,
+        10.0,
+        15.0,
+        20.0,
+        25.0,
+        30.0
+      ],
+      "costo_a": [
+        187.85,
+        188.58,
+        189.31,
+        190.04,
+        190.77,
+        191.5,
+        192.23,
+        192.97,
+        193.7,
+        194.43,
+        195.16,
+        195.89,
+        196.62
+      ],
+      "costo_b": [
+        215.18,
+        215.83,
+        216.48,
+        217.13,
+        217.78,
+        218.43,
+        219.08,
+        219.72,
+        220.37,
+        221.02,
+        221.67,
+        222.32,
+        222.97
+      ],
+      "differenza_a_meno_b": [
+        -27.33,
+        -27.25,
+        -27.17,
+        -27.09,
+        -27.01,
+        -26.93,
+        -26.85,
+        -26.75,
+        -26.67,
+        -26.59,
+        -26.51,
+        -26.43,
+        -26.35
+      ],
+      "punto_pareggio": null
+    }
+  }
+}

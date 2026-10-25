@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+tmp/
+~$*.docx
+report/
+tools/
+.DS_Store
+Thumbs.db

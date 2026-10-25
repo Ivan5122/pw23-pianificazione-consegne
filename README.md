@@ -101,7 +101,7 @@ Con i parametri iniziali lo Scenario A costa 26,85 EUR in meno. Il pareggio si r
 ## Verifiche della bozza
 
 - Test automatici eseguiti: 9 superati su 9.
-- Documento Word: 7.213 parole secondo il conteggio di Microsoft Word.
+- Documento Word: 7.197 parole secondo il conteggio di Microsoft Word.
 - PDF di controllo: 12 pagine.
 - Segnaposto del template rimossi.
 - Nome, matricola e collegamento alla repository sono stati inseriti nel report finale.
